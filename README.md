@@ -12,6 +12,9 @@ A mobile dice roll app. Users can randomly roll dice with a press of a button.
 $ git clone https://github.com/devJimmyLam/Dice-Roller-App.git
 ```
 2. In your terminal, navigate into the cloned directory and install the required dependencies.
+```bash
+$ cd Dice-Roller-App
+```
 See [React-Native ](https://reactnative.dev/docs/environment-setup) to setup development environment.
 ```bash
 $ npm install -g react-native-cli

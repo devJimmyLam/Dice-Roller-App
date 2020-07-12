@@ -47,6 +47,7 @@ export default class App extends React.Component {
         this.setState({ uri: require("./src/images/dice1.png") })
         break;
     }
+
   };
 
   render() {
