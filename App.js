@@ -5,7 +5,6 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
-  Alert,
 } from "react-native";
 
 export default class App extends React.Component {
@@ -21,13 +20,39 @@ export default class App extends React.Component {
   };
 
   playButtonPressed = () => {
-    Alert.alert("Hey: " + this.getRandomValue())
-  }
+    // Alert.alert("Hey: " + this.getRandomValue())
+
+    let randomNumber = this.getRandomValue();
+    switch (randomNumber) {
+      case 1:
+        this.setState({ uri: require("./src/images/dice1.png") })
+        break;
+      case 2:
+        this.setState({ uri: require("./src/images/dice2.png") })
+        break;
+      case 3:
+        this.setState({ uri: require("./src/images/dice3.png") })
+        break;
+      case 4:
+        this.setState({ uri: require("./src/images/dice4.png") })
+        break;
+      case 5:
+        this.setState({ uri: require("./src/images/dice5.png") })
+        break;
+      case 6:
+        this.setState({ uri: require("./src/images/dice6.png") })
+        break;
+
+      default:
+        this.setState({ uri: require("./src/images/dice1.png") })
+        break;
+    }
+  };
 
   render() {
     return (
       <View style={styles.container} >
-        <Text style={styles.header}>Dice Roll App</Text>
+        <Text style={styles.header}>Dice Roller App</Text>
         <Image
           source={this.state.uri}
         />
