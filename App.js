@@ -22,8 +22,8 @@ export default class App extends React.Component {
   playButtonPressed = () => {
     // Alert.alert("Hey: " + this.getRandomValue())
 
-    let randomNumber = this.getRandomValue();
-    switch (randomNumber) {
+    let rollDice = this.getRandomValue();
+    switch (rollDice) {
       case 1:
         this.setState({ uri: require("./src/images/dice1.png") })
         break;
